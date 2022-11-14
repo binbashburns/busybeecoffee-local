@@ -58,7 +58,7 @@ try {
                     <a href="menu.php" class="nav-item nav-link">Menu</a>
                     <a href="locations.php" class="nav-item nav-link">Locations</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    <a href="wholesale.html" class="nav-item nav-link">Wholesale</a>
+                    <a href="wholesale.php" class="nav-item nav-link">Wholesale</a>
                 </div>
             </div>
         </nav>
@@ -216,8 +216,6 @@ try {
             <div class="row">
                 <div class="col-lg-6">
                     <h1 class="mb-5">Hot Coffee</h1>
-
-                    <!-- Item 1 Start -->
                     <div class="row align-items-center mb-5">
                         <div class="col-4 col-sm-3">
                             <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
@@ -228,9 +226,6 @@ try {
                             <p class="m-0">Our founders favorite. We have single-origins, blends, drips and pourovers.</p>
                         </div>
                     </div>
-                    <!-- Item 1 End -->
-
-                    <!-- Item 2 Start -->
                     <div class="row align-items-center mb-5">
                         <div class="col-4 col-sm-3">
                             <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-2.jpg" alt="">
@@ -241,9 +236,6 @@ try {
                             <p class="m-0">The most delicious way to catch a buzz. Our espresso-based beverages are the most popular with our customers.</p>
                         </div>
                     </div>
-                    <!-- Item 2 End -->
-
-                    <!-- Item 3 Start -->
                     <div class="row align-items-center mb-5">
                         <div class="col-4 col-sm-3">
                             <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-3.jpg" alt="">
@@ -254,8 +246,6 @@ try {
                             <p class="m-0">Try it sweetened with Honey, Sugar, Stevia, Monkfruit, and more. You name it, we've got it.</p>
                         </div>
                     </div>
-                    <!-- Item 3 End -->
-
                 </div>
                 <div class="col-lg-6">
                     <h1 class="mb-5">Cold Coffee</h1>
@@ -323,60 +313,6 @@ try {
         </div>
     </div>
     <!-- Seasonal Offerings End -->
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h4>
-                <h1 class="display-4">Our Clients Say</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="testimonial-item">
-                    <div class="d-flex align-items-center mb-3">
-                        <img class="img-fluid" src="img/testimonial-1.jpg" alt="">
-                        <div class="ml-3">
-                            <h4>Client Name</h4>
-                            <i>Profession</i>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
-                </div>
-                <div class="testimonial-item">
-                    <div class="d-flex align-items-center mb-3">
-                        <img class="img-fluid" src="img/testimonial-2.jpg" alt="">
-                        <div class="ml-3">
-                            <h4>Client Name</h4>
-                            <i>Profession</i>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
-                </div>
-                <div class="testimonial-item">
-                    <div class="d-flex align-items-center mb-3">
-                        <img class="img-fluid" src="img/testimonial-3.jpg" alt="">
-                        <div class="ml-3">
-                            <h4>Client Name</h4>
-                            <i>Profession</i>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
-                </div>
-                <div class="testimonial-item">
-                    <div class="d-flex align-items-center mb-3">
-                        <img class="img-fluid" src="img/testimonial-4.jpg" alt="">
-                        <div class="ml-3">
-                            <h4>Client Name</h4>
-                            <i>Profession</i>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
 
     <!-- Footer Start -->
     <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>RESERVATION - Busy Bee Coffee Co.</title>
+    <title>WHOLESALE - Busy Bee Coffee Co.</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free Website Template" name="keywords">
     <meta content="Free Website Template" name="description">
@@ -42,7 +42,7 @@
                     <a href="menu.php" class="nav-item nav-link">Menu</a>
                     <a href="locations.php" class="nav-item nav-link">Locations</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    <a href="wholesale.html" class="nav-item nav-link">Wholesale</a>    
+                    <a href="wholesale.php" class="nav-item nav-link">Wholesale</a>    
                 </div>
             </div>
         </nav>
@@ -53,18 +53,18 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header mb-5 position-relative overlay-bottom">
         <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
-            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Reservation</h1>
+            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Wholesale</h1>
             <div class="d-inline-flex mb-lg-5">
                 <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
                 <p class="m-0 text-white px-2">/</p>
-                <p class="m-0 text-white">Reservation</p>
+                <p class="m-0 text-white">Wholesale</p>
             </div>
         </div>
     </div>
     <!-- Page Header End -->
 
 
-    <!-- Reservation Start -->
+    <!-- Wholesale Start -->
     <div class="container-fluid py-5">
         <div class="container">
             <div class="reservation position-relative overlay-top overlay-bottom">
