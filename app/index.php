@@ -29,7 +29,7 @@ try {
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -56,9 +56,9 @@ try {
                 <div class="navbar-nav ml-auto p-4">
                     <a href="index.php" class="nav-item nav-link active">Home</a>
                     <a href="menu.php" class="nav-item nav-link">Menu</a>
-                    <a href="locations.html" class="nav-item nav-link">Locations</a>
+                    <a href="locations.php" class="nav-item nav-link">Locations</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    <a href="wholesale.html" class="nav-item nav-link">Wholesale</a>    
+                    <a href="wholesale.html" class="nav-item nav-link">Wholesale</a>
                 </div>
             </div>
         </nav>
@@ -216,7 +216,7 @@ try {
             <div class="row">
                 <div class="col-lg-6">
                     <h1 class="mb-5">Hot Coffee</h1>
-                    
+
                     <!-- Item 1 Start -->
                     <div class="row align-items-center mb-5">
                         <div class="col-4 col-sm-3">
@@ -303,22 +303,22 @@ try {
                 <h1 class="display-4">Seasonal Drinks</h1>
             </div>
             <div class="row">
-            <table class="table table-bordered table-condensed">
-                <thead>
-                    <tr>
-                        <th>Drink Name</th>
-                        <th>Cost</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php while ($row = $q->fetch()): ?>
+                <table class="table table-bordered table-condensed">
+                    <thead>
                         <tr>
-                            <td><?php echo htmlspecialchars($row['drinkName']) ?></td>
-                            <td>$<?php echo htmlspecialchars($row['cost']); ?></td>
+                            <th>Drink Name</th>
+                            <th>Cost</th>
                         </tr>
-                    <?php endwhile; ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php while ($row = $q->fetch()) : ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($row['drinkName']) ?></td>
+                                <td>$<?php echo htmlspecialchars($row['cost']); ?></td>
+                            </tr>
+                        <?php endwhile; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
