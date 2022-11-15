@@ -98,13 +98,16 @@ try {
                     <h5 class="mb-3">We started out of a garage. Now we serve fresh roasted coffee across the United States.</h5>
                     <p>After serving Southeastern Kentucky our popular fresh-roasted coffee for five years, we're going nationwide with three new locations in Montana, California, and Texas. This enables us to get the coffee closer to our customers, and ship faster so you can get your buzz on sooner.</p>
                 </div>
-                <?php while ($row = $q->fetch()) : ?>
-                    <h1 class="mb-3"><?php echo htmlspecialchars($row['locationName']) ?></h1>
-                    <h5 class="mb-3"><?php echo htmlspecialchars($row['address']) ?></h5>
-                    <h5 class="mb-3"><?php echo htmlspecialchars($row['city']) ?></h5>
-                    <h5 class="mb-3"><?php echo htmlspecialchars($row['state']) ?></h5>
-                    <h5 class="mb-3"><?php echo htmlspecialchars($row['zip']) ?></h5>
-                <?php endwhile; ?>
+                <div class="col-lg-4 py-0 py-lg-5">
+                    <?php while ($row = $q->fetch()) : ?>
+                        <br><h1 class="mb-3"><?php echo htmlspecialchars($row['locationName']) ?></h1></br>
+                        <?php echo htmlspecialchars($row['address']) ?>
+                        <?php echo htmlspecialchars($row['city']) ?>, 
+                        <?php echo htmlspecialchars($row['state']) ?> 
+                        <?php echo htmlspecialchars($row['zip']) ?>
+                        <br></br>
+                    <?php endwhile; ?>
+                </div>
             </div>
         </div>
     </div>

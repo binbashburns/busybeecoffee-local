@@ -1,3 +1,24 @@
+<?php
+require_once 'dbconfig.php';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+
+    $sql = 'SELECT coffeeName,
+                    roast,
+                    origin,
+                    type,
+                    costLb
+               FROM coffees
+              ORDER BY coffeeName';
+
+    $q = $pdo->query($sql);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    die("Could not connect to the database $dbname :" . $e->getMessage());
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +34,7 @@
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -42,7 +63,7 @@
                     <a href="menu.php" class="nav-item nav-link">Menu</a>
                     <a href="locations.php" class="nav-item nav-link">Locations</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    <a href="wholesale.php" class="nav-item nav-link">Wholesale</a>    
+                    <a href="wholesale.php" class="nav-item nav-link">Wholesale</a>
                 </div>
             </div>
         </nav>
@@ -72,62 +93,89 @@
                     <div class="col-lg-6 my-5 my-lg-0">
                         <div class="p-5">
                             <div class="mb-4">
-                                <h1 class="display-3 text-primary">30% OFF</h1>
-                                <h1 class="text-white">For Online Reservation</h1>
+                                <h1 class="display-3 text-primary">35% OFF</h1>
+                                <h1 class="text-white">For Wholesale Partners</h1>
                             </div>
-                            <p class="text-white">Lorem justo clita erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                                ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea</p>
+                            <p class="text-white">Do you own a local coffee shop?</p>
                             <ul class="list-inline text-white m-0">
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Lorem ipsum dolor sit amet</li>
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Lorem ipsum dolor sit amet</li>
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Lorem ipsum dolor sit amet</li>
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Have you been looking for better beans?</li>
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Shopping local reduces emissions (and believe it or not, saves bees!)</li>
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Requires minimum purchase of 100 lbs.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="text-center p-5" style="background: rgba(51, 33, 29, .8);">
-                            <h1 class="text-white mb-4 mt-5">Book Your Table</h1>
-                            <form class="mb-5">
-                                <div class="form-group">
-                                    <input type="text" class="form-control bg-transparent border-primary p-4" placeholder="Name"
-                                        required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control bg-transparent border-primary p-4" placeholder="Email"
-                                        required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker"/>
+                            <h1 class="text-white mb-4 mt-5">Buy Wholesale!</h1>
+                            <div class="contact-form">
+                                <div id="success"></div>
+                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                                    <div class="control-group">
+                                        <input type="text" class="form-control bg-transparent p-4" id="name" placeholder="Your Business Name" required="required" data-validation-required-message="Please enter your name" />
+                                        <p class="help-block text-danger"></p>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Time" data-target="#time" data-toggle="datetimepicker"/>
+                                    <div class="control-group">
+                                        <input type="email" class="form-control bg-transparent p-4" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                        <p class="help-block text-danger"></p>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <select class="custom-select bg-transparent border-primary px-4" style="height: 49px;">
-                                        <option selected>Person</option>
-                                        <option value="1">Person 1</option>
-                                        <option value="2">Person 2</option>
-                                        <option value="3">Person 3</option>
-                                        <option value="3">Person 4</option>
-                                    </select>
-                                </div>
-                                
-                                <div>
-                                    <button class="btn btn-primary btn-block font-weight-bold py-3" type="submit">Book Now</button>
-                                </div>
-                            </form>
+                                    <div class="control-group">
+                                        <input type="text" class="form-control bg-transparent p-4" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <textarea class="form-control bg-transparent py-3 px-4" rows="5" id="message" placeholder="Please let us know what roasts you're interested in, and how much you'd be expecting to purchase per month!" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="sendMessageButton">Send
+                                            Message</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Reservation End -->
+    <!-- Wholesale End -->
 
+     <!-- Current Roasts Start -->
+     <div class="container-fluid py-5">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Try Our</h4>
+                <h1 class="display-4">Current Roasts</h1>
+            </div>
+            <div class="row">
+                <table class="table table-bordered table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Coffee Name</th>
+                            <th>Roast</th>
+                            <th>Origin</th>
+                            <th>Type</th>
+                            <th>Cost/lb (Before Discount)</th>
+                            <th>Cost/lb (After Discount)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php while ($row = $q->fetch()) : ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($row['coffeeName']) ?></td>
+                                <td><?php echo htmlspecialchars($row['roast']) ?></td>
+                                <td><?php echo htmlspecialchars($row['origin']) ?></td>
+                                <td><?php echo htmlspecialchars($row['type']) ?></td>
+                                <td>$<?php echo htmlspecialchars($row['costLb']) ?></td>
+                                <td>$<?php echo number_format(htmlspecialchars($row['costLb'])*0.65, 2)?></td>
+                            </tr>
+                        <?php endwhile; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Current Roasts End -->
 
     <!-- Footer Start -->
     <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">

@@ -68,7 +68,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 INSERT INTO `busybee-db`.`drinks` (`id`, `drinkName`, `whereAvailable`, `cost`, `coffees_id`) VALUES ('1', 'Caramel Macchiato', '2', '6', '1');
 INSERT INTO `busybee-db`.`drinks` (`id`, `drinkName`, `whereAvailable`, `cost`, `coffees_id`) VALUES ('2', 'Americano', '1', '6', '2');
-INSERT INTO `busybee-db`.`drinks` (`id`, `drinkName`, `whereAvailable`, `cost`, `coffees_id`) VALUES ('3', 'Southern Buzz', '1', '2', '3');
+INSERT INTO `busybee-db`.`drinks` (`id`, `drinkName`, `whereAvailable`, `cost`, `coffees_id`) VALUES ('3', 'Southern Buzz', '1', '6', '3');
 
 -- -----------------------------------------------------
 -- Table `busybee-db`.`locations`
@@ -90,10 +90,10 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 -- Fill Table `busybee-db`.`locations`
 -- -----------------------------------------------------
-INSERT INTO `busybee-db`.`locations` (`id`, `locationName`, `address`, `city`, `state`, `zip`) VALUES ('1', 'bbEast', '123 4th Street', 'London', 'KY', '40741');
-INSERT INTO `busybee-db`.`locations` (`id`, `locationName`, `address`, `city`, `state`, `zip`) VALUES ('2', 'bbNorth', '456 7th Street', 'Billings', 'MT', '59101');
-INSERT INTO `busybee-db`.`locations` (`id`, `locationName`, `address`, `city`, `state`, `zip`) VALUES ('3', 'bbWest', '890 1st Street', 'Los Angeles', 'CA', '90201');
-INSERT INTO `busybee-db`.`locations` (`id`, `locationName`, `address`, `city`, `state`, `zip`) VALUES ('4', 'bbSouth', '234 5th Street', 'Abilene', 'TX', '79601');
+INSERT INTO `busybee-db`.`locations` (`id`, `locationName`, `address`, `city`, `state`, `zip`) VALUES ('1', 'Busy Bee East', '123 4th Street', 'London', 'KY', '40741');
+INSERT INTO `busybee-db`.`locations` (`id`, `locationName`, `address`, `city`, `state`, `zip`) VALUES ('2', 'Busy Bee North', '456 7th Street', 'Billings', 'MT', '59101');
+INSERT INTO `busybee-db`.`locations` (`id`, `locationName`, `address`, `city`, `state`, `zip`) VALUES ('3', 'Busy Bee West', '890 1st Street', 'Los Angeles', 'CA', '90201');
+INSERT INTO `busybee-db`.`locations` (`id`, `locationName`, `address`, `city`, `state`, `zip`) VALUES ('4', 'Busy Bee South', '234 5th Street', 'Abilene', 'TX', '79601');
 
 -- -----------------------------------------------------
 -- Table `busybee-db`.`locations_has_drinks`
