@@ -2,11 +2,12 @@
 ## About
 This is a sample website built on Docker containers with PHP, CSS, HTML, and a MySQL database backend!</br>
 I started this out as a project that would be hosted in AWS that featured a full CI/CD pipeline, ECS, and more.</br>
-Alas, my aspirations were farfetched, and I set the bar too high.</br>
 Only so much you can do in a time crunch, I suppose.</br>
+Anyway, install the dependencies, then scoot down to `Instructions for Creating the Website Locally`.
 
 ## Dependencies
 - Ensure Docker Desktop is installed, and started. (https://www.docker.com/products/docker-desktop/)
+- Alternatively, just make sure Docker and Docker Compose are installed. ()
 - Ensure MySQLWorkbench is installed, and started. (https://www.mysql.com/products/workbench/)
 - Ensure Git is installed on your local machine: (https://git-scm.com/downloads)
 
@@ -15,8 +16,9 @@ As mentioned previously, the original intent of this project was to spin up the 
 Since I was not able to complete this objective in time, the PHP website and MySQL database are spun up locally as a proof-of-concept. The steps to create this locally are as follows:</br>
 - Clone this repository to your local machine: `git clone https://github.com/binbashburns/busybeecoffee-local.git`
 - Move into the directory: `cd busybeecoffee-local`
-- Build the Docker container images: `docker-compose up`
+- Build the Docker container images: `sudo docker-compose up --detach`
 - Access http://localhost/ in a web browser.
+- Once you're done browsing the website, tear everything doen: `sudo docker-compose down`
 
 ## Database and Default Credentials
 - A MySQL 8.0 container will be spun up as a database backend for the PHP/HTML/Apache web application.
