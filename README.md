@@ -10,13 +10,6 @@ Only so much you can do in a time crunch, I suppose.</br>
 - Ensure MySQLWorkbench is installed, and started. (https://www.mysql.com/products/workbench/)
 - Ensure Git is installed on your local machine: (https://git-scm.com/downloads)
 
-## Database and Default Credentials
-- A MySQL 8.0 container will be spun up as a database backend for the PHP/HTML/Apache web application.
-- The default credentials for the database are defined in `docker-compose.yml`. You can modify them however you would like, but the default credentials are as follows:
-- Root Account: `root`
-- Root Account Password: `super-secret-password`
-- Database Name: `busybee-db`
-
 ## Instructions for Creating the Website Locally
 As mentioned previously, the original intent of this project was to spin up the Docker instances in the cloud.</br>
 Since I was not able to complete this objective in time, the PHP website and MySQL database are spun up locally as a proof-of-concept. The steps to create this locally are as follows:</br>
@@ -24,6 +17,13 @@ Since I was not able to complete this objective in time, the PHP website and MyS
 - Move into the directory: `cd busybeecoffee-local`
 - Build the Docker container images: `docker-compose up`
 - Access http://localhost/ in a web browser.
+
+## Database and Default Credentials
+- A MySQL 8.0 container will be spun up as a database backend for the PHP/HTML/Apache web application.
+- The default credentials for the database are defined in `docker-compose.yml`. You can modify them however you would like, but the default credentials are as follows:
+- Root Account: `root`
+- Root Account Password: `super-secret-password`
+- Database Name: `busybee-db`
 
 ## Diagrams
 A few diagrams have been created to accompany this project, and are located in the `diagrams` directory of this GitHub repository:
