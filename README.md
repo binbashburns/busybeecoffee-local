@@ -13,12 +13,12 @@ Anyway, install the dependencies, then scoot down to `Instructions for Creating 
 
 ## Instructions for Creating the Website Locally
 As mentioned previously, the original intent of this project was to spin up the Docker instances in the cloud.</br>
-Since I was not able to complete this objective in time, the PHP website and MySQL database are spun up locally as a proof-of-concept. The steps to create this locally are as follows:</br>
+Since I was not able to complete this objective, here are the instructions on creating the PHP website and MySQL database locally as a proof-of-concept:</br>
 - Clone this repository to your local machine: `git clone https://github.com/binbashburns/busybeecoffee-local.git`
 - Move into the directory: `cd busybeecoffee-local`
-- Build the Docker container images: `sudo docker-compose up --detach`
+- Build the Docker container images: `docker-compose up --detach`
 - Access http://localhost/ in a web browser.
-- Once you're done browsing the website, tear everything doen: `sudo docker-compose down`
+- Once you're done browsing the website, tear everything doWn: `docker-compose down`
 
 ## Database and Default Credentials
 - A MySQL 8.0 container will be spun up as a database backend for the PHP/HTML/Apache web application.
