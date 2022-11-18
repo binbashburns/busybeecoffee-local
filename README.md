@@ -1,4 +1,4 @@
-# PHP + MySQL Coffee Shop Website Template
+# Busy Bee Coffee Web Store - Locally Hosted
 ## About
 This is a sample website built on Docker containers with PHP, CSS, HTML, and a MySQL database backend!</br>
 I started this out as a project that would be hosted in AWS that featured a full CI/CD pipeline, ECS, and more.</br>
